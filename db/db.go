@@ -31,9 +31,6 @@ func dbvar() string {
 		" port=" + DB_PORT +
 		" sslmode=disable TimeZone=Asia/Shanghai") //
 
-	// LOCAL DB
-	//dsn := "host=localhost user=root password=secret dbname=root port=5431 sslmode=disable TimeZone=Asia/Shanghai"
-
 	return dsn
 }
 
