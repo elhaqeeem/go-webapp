@@ -24,13 +24,19 @@ func dbvar() string {
 	DB_NAME := os.Getenv("DB_NAME")
 	DB_USER := os.Getenv("DB_USER")
 	SSL_MODE := os.Getenv("SSL_MODE")
+	sslrootcert := os.Getenv("sslrootcert")
+	sslkey := os.Getenv("sslkey")
+	sslcert := os.Getenv("sslcert")
 
 	dsn := ("host=" + DB_HOST +
 		" user=" + DB_USER +
 		" password=" + DB_PASSWORD +
 		" dbname=" + DB_NAME +
 		" port=" + DB_PORT +
-		" sslmode=" + SSL_MODE) //
+		" sslmode=" + SSL_MODE +
+		" sslrootcert=" + sslrootcert +
+		" sslkey=" + sslkey +
+		" sslcert=" + sslcert) //
 
 	return dsn
 }
